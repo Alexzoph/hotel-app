@@ -14,93 +14,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-// Configura las fechas mínimas para el formulario de búsqueda
-const checkInInput = document.getElementById('check-in');
-const checkOutInput = document.getElementById('check-out');
-const searchButton = document.getElementById('search-button');
-const resultsDiv = document.getElementById('results');
+    // Configura las fechas mínimas para el formulario de búsqueda
+    const checkInInput = document.getElementById('check-in');
+    const checkOutInput = document.getElementById('check-out');
 
-if (checkInInput && checkOutInput && searchButton && resultsDiv) {
-    // Establece la fecha mínima como hoy
-    const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
+    if (checkInInput && checkOutInput) {
+        // Establece la fecha mínima como hoy
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
 
-    // Formatear fechas para input date (YYYY-MM-DD)
-    const formatDate = (date) => {
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    };
+        // Formatear fechas para input date (YYYY-MM-DD)
+        const formatDate = (date) => {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
 
-    checkInInput.min = formatDate(today);
-    checkOutInput.min = formatDate(tomorrow);
+        checkInInput.min = formatDate(today);
+        checkOutInput.min = formatDate(tomorrow);
 
-    // Actualizar fecha mínima de salida cuando cambia la fecha de entrada
-    checkInInput.addEventListener('change', function () {
-        const newMinCheckout = new Date(this.value);
-        newMinCheckout.setDate(newMinCheckout.getDate() + 1);
-        checkOutInput.min = formatDate(newMinCheckout);
-
-        // Si la fecha de salida es anterior a la nueva fecha mínima, actualizarla
-        if (checkOutInput.value && new Date(checkOutInput.value) <= new Date(this.value)) {
-            checkOutInput.value = formatDate(newMinCheckout);
-        }
-    });
-
-    // Función para buscar habitaciones disponibles
-    searchButton.addEventListener('click', async () => {
-        const checkInDate = checkInInput.value;
-        const checkOutDate = checkOutInput.value;
-
-        // Validar que ambas fechas estén seleccionadas
-        if (!checkInDate || !checkOutDate) {
-            resultsDiv.innerHTML = '<p>Por favor, selecciona ambas fechas.</p>';
-            return;
-        }
-
-        try {
-            // Enviar solicitud al backend
-            const response = await fetch('http://localhost:3000/check_availability', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: `check_in=${encodeURIComponent(checkInDate)}&check_out=${encodeURIComponent(checkOutDate)}`
-            });
-
-            const data = await response.json();
-
-            // Manejar respuesta
-            if (response.ok) {
-                if (data.error) {
-                    resultsDiv.innerHTML = `<p>${data.error}</p>`;
-                } else if (data.length === 0) {
-                    resultsDiv.innerHTML = '<p>No hay habitaciones disponibles para las fechas seleccionadas.</p>';
-                } else {
-                    // Mostrar habitaciones disponibles
-                    let html = '<h3>Habitaciones Disponibles</h3><ul>';
-                    data.forEach(habitacion => {
-                        html += `
-                            <li>
-                                <strong>${habitacion.numero_habitacion}</strong> (${habitacion.tipo_habitacion})<br>
-                                Capacidad: ${habitacion.capacidad} personas<br>
-                                Precio por noche: $${habitacion.precio_por_noche}<br>
-                                ${habitacion.descripcion || ''}
-                            </li>`;
-                    });
-                    html += '</ul>';
-                    resultsDiv.innerHTML = html;
-                }
-            } else {
-                resultsDiv.innerHTML = '<p>Error al consultar disponibilidad.</p>';
+        // Actualizar fecha mínima de salida cuando cambia la fecha de entrada
+        checkInInput.addEventListener('change', function() {
+            const newMinCheckout = new Date(this.value);
+            newMinCheckout.setDate(newMinCheckout.getDate() + 1);
+            checkOutInput.min = formatDate(newMinCheckout);
+            
+            // Si la fecha de salida es anterior a la nueva fecha mínima, actualizarla
+            if (new Date(checkOutInput.value) <= new Date(this.value)) {
+                checkOutInput.value = formatDate(newMinCheckout);
             }
-        } catch (error) {
-            resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
-        }
-    });
-}
+        });
+    }
 
     // Formulario de búsqueda
     const searchForm = document.getElementById('search-form');
