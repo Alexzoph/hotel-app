@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite Junior - Hotel Luna</title>
+    <meta name="description" content="Disfruta de nuestra exclusiva Habitación Deluxe con vistas panorámicas y todas las comodidades para una estancia inolvidable.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/habitacion.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="js/main.js"></script>
+    <script src="js/habitacion.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Hotel Luna</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html" class="active">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+58 424-9636655</span>
+                    </div>
+                    <a href="reserva.html" class="btn btn-primary">Reservar</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html" class="active">Habitaciones</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+58 424-9636655</span>
+                </div>
+                <a href="reserva.html" class="btn btn-primary">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Suite Junior</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                <a href="habitaciones.html">Habitaciones</a>
+                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                <span class="current">Suite Junior</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Gallery -->
+    <section class="room-gallery">
+        <div class="container">
+            <div class="gallery-container">
+                <div class="main-image">
+                    <img src="img/junior.png" alt="Habitación Deluxe - Vista principal" id="main-room-image">
+                </div>
+                <div class="thumbnail-container">
+                    <div class="thumbnail active" data-src="img/junior.png">
+                        <img src="img/junior.png" alt="Habitación Deluxe - Vista 1">
+                    </div>
+                    <div class="thumbnail" data-src="img/junior2.png">
+                        <img src="img/junior2.png" alt="Habitación Deluxe - Baño">
+                    </div>
+                    <div class="thumbnail" data-src="img/junior3.png">
+                        <img src="img/junior3.png" alt="Habitación Deluxe - Vista panorámica">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Details -->
+    <section class="room-details">
+        <div class="container">
+            <div class="room-content">
+                <div class="room-description">
+                    <h2>Confort en Cada Detalle</h2>
+                    <p class="room-intro">
+                        Nuestra Habitación Deluxe es el refugio perfecto para aquellos que buscan una experiencia de alojamiento superior, combinando elegancia contemporánea con comodidades de primera clase y vistas panorámicas impresionantes de la ciudad.
+                    </p>
+                    
+                    <p>
+                        Con una superficie de 45 m², esta espaciosa habitación ha sido cuidadosamente diseñada para proporcionar el máximo confort durante su estancia. Los amplios ventanales de suelo a techo inundan el espacio con luz natural y ofrecen vistas espectaculares del horizonte, creando un ambiente luminoso y acogedor.
+                    </p>
+                    
+                    <p>
+                        El área de descanso cuenta con una lujosa cama king-size equipada con colchón premium de alta densidad y ropa de cama de algodón egipcio de 400 hilos, garantizando un sueño reparador. La zona de estar incluye un cómodo sofá, una mesa de trabajo ergonómica y una selección de revistas de actualidad.
+                    </p>
+                    
+                    <p>
+                        El baño privado, revestido en mármol dispone de ducha de efecto lluvia y bañera independiente, junto con una selección de productos de baño orgánicos. Cada detalle ha sido pensado para crear una experiencia de bienestar completa.
+                    </p>
+                    
+                    <div class="room-features-container">
+                        <h3>Características y Beneficios</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bed"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Cama King Size</h4>
+                                    <p>Colchón de alta densidad con topper y ropa de cama de algodón de 400 hilos.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Vistas Panorámicas</h4>
+                                    <p>Ventanales de suelo a techo con vistas espectaculares de la ciudad y puesta de sol.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bath"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Baño de Lujo</h4>
+                                    <p>Baño completo con ducha efecto lluvia, bañera independiente y productos orgánicos premium.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tv"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Entretenimiento</h4>
+                                    <p>Smart TV 43" con canales premium y sistema de sonido Bluetooth integrado.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-coffee"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Minibar Premium</h4>
+                                    <p>Selección de bebidas y snacks gourmet, máquina de café Nespresso con cápsulas variadas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-concierge-bell"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Servicio Personalizado</h4>
+                                    <p>Servicio de habitaciones 24h y asistente personal durante su estancia.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-wifi"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Conectividad</h4>
+                                    <p>Wi-Fi de alta velocidad, puertos USB y estación de carga inalámbrica.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-snowflake"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Clima Personalizado</h4>
+                                    <p>Sistema de climatización individual con control digital de temperatura.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="room-services">
+                        <h3>Servicios Incluidos</h3>
+                        <ul class="services-list">
+                            <li><i class="fas fa-check"></i> Desayuno sin cargo adicional</li>
+                            <li><i class="fas fa-check"></i> Acceso gratuito al spa del hotel</li>
+                            <li><i class="fas fa-check"></i> Servicio de descubierta nocturna con preparación de la habitación para dormir</li>
+                            <li><i class="fas fa-check"></i> Check-out hasta las 14:00h (sujeto a disponibilidad)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="room-sidebar">
+                    <div class="booking-card">
+                        <div class="price-container">
+                            <span class="price">220$</span>
+                            <span class="per-night">por noche</span>
+                        </div>
+                        
+                        <div class="room-info">
+                            <div class="info-item">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>60 m²</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <span>2 adultos</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-bed"></i>
+                                <span>Cama King</span>
+                            </div>
+                        </div>
+                        
+                        <form class="booking-form-mini">
+                            <div class="form-group">
+                                <label for="check-in">Llegada</label>
+                                <input type="date" id="check-in" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="check-out">Salida</label>
+                                <input type="date" id="check-out" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guests">Huéspedes</label>
+                                <select id="guests" required>
+                                    <option value="1">1 adulto</option>
+                                    <option value="2" selected>2 adultos</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Reservar Ahora</button>
+                        </form>
+                        
+                        <div class="booking-help">
+                            <p>¿Necesitas ayuda con tu reserva?</p>
+                            <a href="tel:+58 424-9636655" class="phone-link">
+                                <i class="fas fa-phone"></i> +58 424-9636655
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="policy-card">
+                        <h3>Políticas de la Habitación</h3>
+                        <ul class="policy-list">
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <strong>Check-in:</strong> A partir de las 15:00h<br>
+                                    <strong>Check-out:</strong> Hasta las 12:00h
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-smoking-ban"></i>
+                                <div>
+                                    <strong>No fumadores</strong><br>
+                                    Habitación para no fumadores
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-paw"></i>
+                                <div>
+                                    <strong>Mascotas:</strong><br>
+                                    No se admiten mascotas
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-credit-card"></i>
+                                <div>
+                                    <strong>Política de cancelación:</strong><br>
+                                    Cancelación gratuita hasta 48h antes
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Rooms -->
+    <section class="related-rooms">
+        <div class="container">
+            <h2 class="section-title">Otras Habitaciones que Podrían Interesarte</h2>
+            
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <div class="room-card-image">
+                        <img src="img/deluxe1.png" alt="Suite Deluxe">
+                        <div class="room-card-price">
+                            <span>150$</span> / noche
+                        </div>
+                    </div>
+                    <div class="room-card-content">
+                        <h3>Suite Deluxe</h3>
+                        <p>Suite elegante con sala de estar separada y vistas panorámicas al jardín del hotel.</p>
+                        <div class="room-card-features">
+                            <span><i class="fas fa-ruler-combined"></i> 45 m²</span>
+                            <span><i class="fas fa-users"></i> 2 personas</span>
+                            <span><i class="fas fa-bed"></i> Cama King</span>
+                        </div>
+                        <a href="habitacion-deluxe.html" class="btn btn-outline">Ver Detalles</a>
+                    </div>
+                </div>
+                
+                <div class="room-card">
+                    <div class="room-card-image">
+                        <img src="img/familiar.png" alt="Suite Familiar">
+                        <div class="room-card-price">
+                            <span>280$</span> / noche
+                        </div>
+                    </div>
+                    <div class="room-card-content">
+                        <h3>Suite Familiar</h3>
+                        <p>Amplia suite diseñada para familias con dos habitaciones conectadas y todas las comodidades.</p>
+                        <div class="room-card-features">
+                            <span><i class="fas fa-ruler-combined"></i> 75 m²</span>
+                            <span><i class="fas fa-users"></i> 4 personas</span>
+                            <span><i class="fas fa-bed"></i> 2 Camas</span>
+                        </div>
+                        <a href="habitacion-familiar.html" class="btn btn-outline">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hotel Luna</h3>
+                    <p>Ofrecemos una experiencia única de hospitalidad con servicios de primera clase y atención personalizada para hacer de su estancia un momento inolvidable.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Calle Principal 123, 28001 Madrid, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+58 424-9636655</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@hotel-luna.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete para recibir ofertas exclusivas y novedades.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Hotel Luna. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

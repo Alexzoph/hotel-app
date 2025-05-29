@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Luna - Experiencia de lujo</title>
+    <meta name="description" content="Disfruta de una estancia inolvidable en Hotel Luna, con las mejores habitaciones, servicios exclusivos y ubicación privilegiada.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Hotel Luna</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="active">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+58 424-9636655</span>
+                    </div>
+                    <a href="habitaciones.html" class="btn btn-primary">Reservar</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Menú para telefonos moviles -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+58 424-9636655</span>
+                </div>
+                <a href="habitaciones.html" class="btn btn-primary">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="main-content">
+            <h1>Hotel Luna</h1>
+            <p>Descubre una experiencia única de hospitalidad y confort en el centro de la ciudad</p>
+            <div class="main-buttons">
+                <a href="habitaciones.html" class="btn btn-primary">Reservar Ahora</a>
+                <a href="servicios.html" class="btn btn-outline">Nuestros Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-box">
+        <div class="container">
+            <form id="search-form" class="search-form">
+                <div class="form-group">
+                    <label for="check-in">Fecha de llegada</label>
+                    <input type="date" id="check-in" required>
+                </div>
+                <div class="form-group">
+                    <label for="check-out">Fecha de salida</label>
+                    <input type="date" id="check-out" required>
+                </div>
+                <div class="form-group">
+                    <label for="adults">Adultos</label>
+                    <select id="adults">
+                        <option value="1">1 adulto</option>
+                        <option value="2" selected>2 adultos</option>
+                        <option value="3">3 adultos</option>
+                        <option value="4">4 adultos</option>
+                        <option value="5">5 adultos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="children">Niños</label>
+                    <select id="children">
+                        <option value="0" selected>0 niños</option>
+                        <option value="1">1 niño</option>
+                        <option value="2">2 niños</option>
+                        <option value="3">3 niños</option>
+                        <option value="4">4 niños</option>
+                    </select>
+                </div>
+                <div class="form-group search-button">
+                    <label class="hidden">Buscar</label>
+                    <button type="submit" class="btn btn-primary">Buscar Disponibilidad</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="featured-rooms">
+        <div class="container">
+            <h2 class="section-title">Nuestras Habitaciones</h2>
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/img/deluxe1.png" alt="Habitación Deluxe">
+                    </div>
+                    <div class="room-content">
+                        <h3>Habitación Deluxe</h3>
+                        <p>Espaciosa habitación con vistas a la ciudad y todas las comodidades para una estancia perfecta.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                            <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                            <li><i class="fas fa-bath"></i> Baño privado</li>
+                            <li><i class="fas fa-users"></i> Capacidad: 2 personas</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price">150$</span>
+                                <span class="per-night">/ noche</span>
+                            </div>
+                            <a href="habitacion.html?id=1" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/img/junior.png" alt="Suite Junior">
+                    </div>
+                    <div class="room-content">
+                        <h3>Suite Junior</h3>
+                        <p>Suite elegante con sala de estar separada y posee vistas panorámicas al jardín y piscina del hotel.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                            <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                            <li><i class="fas fa-bath"></i> Baño privado</li>
+                            <li><i class="fas fa-users"></i> Capacidad: 2 personas</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price">220$</span>
+                                <span class="per-night">/ noche</span>
+                            </div>
+                            <a href="habitacion.html?id=2" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="img/familiar.png" alt="Suite Familiar">
+                    </div>
+                    <div class="room-content">
+                        <h3>Suite Familiar</h3>
+                        <p>Amplia suite diseñada para familias con dos habitaciones conectadas y todas las comodidades.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                            <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                            <li><i class="fas fa-bath"></i> Baño privado</li>
+                            <li><i class="fas fa-users"></i> Capacidad: 4 personas</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price">280$</span>
+                                <span class="per-night">/ noche</span>
+                            </div>
+                            <a href="habitacion.html?id=3" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="habitaciones.html" class="btn btn-outline">Ver Todas las Habitaciones</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Restaurante</h3>
+                    <p>Disfruta de nuestra gastronomía local e internacional en un ambiente elegante y acogedor.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Gimnasio</h3>
+                    <p>Mantén tu rutina de ejercicios en nuestro gimnasio completamente equipado, abierto 24/7.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Wi-Fi Gratuito</h3>
+                    <p>Conexión de alta velocidad en todas las áreas del hotel para mantenerte conectado.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Estacionamiento</h3>
+                    <p>Servicio de estacionamiento con vigilancia las 24 horas para la seguridad de tu vehículo.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Spa & Bienestar</h3>
+                    <p>Relájate y rejuvenece con nuestros tratamientos de spa y servicios de bienestar.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Desayuno Buffet</h3>
+                    <p>Comienza el día con nuestro delicioso desayuno buffet con opciones para todos los gustos.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="servicios.html" class="btn btn-outline">Explorar Todos los Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opiniones -->
+    <section class="opiniones">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Huéspedes</h2>
+            <div class="opiniones-slider">
+                <div class="opiniones-container">
+                    <div class="opiniones-card active">
+                        <div class="opiniones-header">
+                            <div class="opiniones-image">
+                                <img src="img/p1.png" alt="María García">
+                            </div>
+                            <div class="opiniones-info">
+                                <h4>María García</h4>
+                                <p>Madrid, España</p>
+                            </div>
+                        </div>
+                        <div class="opiniones-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="opiniones-text">"Una experiencia increíble. Las habitaciones son espaciosas y el personal es muy atento. Definitivamente volveré."</p>
+                    </div>
+
+                    <div class="opiniones-card">
+                        <div class="opiniones-header">
+                            <div class="opiniones-image">
+                                <img src="img/p2.png" alt="Juan Rodríguez">
+                            </div>
+                            <div class="opiniones-info">
+                                <h4>Juan Rodríguez</h4>
+                                <p>Barcelona, España</p>
+                            </div>
+                        </div>
+                        <div class="opiniones-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="opiniones-text">"El restaurante del hotel ofrece platos deliciosos y el servicio es excelente. Muy recomendable."</p>
+                    </div>
+
+                    <div class="opiniones-card">
+                        <div class="opiniones-header">
+                            <div class="opiniones-image">
+                                <img src="img/p3.png" alt="Laura Martínez">
+                            </div>
+                            <div class="opiniones-info">
+                                <h4>Laura Martínez</h4>
+                                <p>Valencia, España</p>
+                            </div>
+                        </div>
+                        <div class="opiniones-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="opiniones-text">"Ubicación perfecta para explorar la ciudad. Las instalaciones son modernas y cómodas."</p>
+                    </div>
+                </div>
+                <div class="opiniones-controls">
+                    <button class="opiniones-prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="opiniones-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button class="opiniones-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Mantente Informado</h2>
+            <p>Suscríbete a nuestro boletín para recibir ofertas exclusivas y novedades sobre nuestros servicios</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn btn-dark">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hotel Luna</h3>
+                    <p>Ofrecemos una experiencia única de hospitalidad con servicios de primera clase y atención personalizada para hacer de su estancia un momento inolvidable.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Calle Principal 123, 28001 Madrid, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+58 424-9636655</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@hotel-luna.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete para recibir ofertas exclusivas y novedades.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Hotel Luna. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="server.js"></script>
+</body>
+</html>

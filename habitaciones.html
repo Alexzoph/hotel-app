@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitaciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Hotel Luna</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html" class="active">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">
+                        <span>+58 424-9636655</span>
+                    </div>
+                    <a href="habitaciones.html" class="btn btn-primary">Reservar</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <div class="phone">
+                    <span>+58 424-9636655</span>
+                </div>
+                <a href="habitaciones.html" class="btn btn-primary">Ver detalles</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="main-h">
+        <div class="main-content-h">
+            <h1>Habitaciones</h1>
+            <p class="current">Reserva ahora para una experiencia única</p>
+            <div class="hero-buttons">
+            </div>
+        </div>
+    </section>
+
+    <!--- Sección de habitaciones --->
+    <section class="featured-rooms">
+        <div class="container">
+            <h2 class="section-title">Nuestras Habitaciones</h2>
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/img/deluxe1.png" alt="Habitación Deluxe">
+                    </div>
+                    <div class="room-content">
+                        <h3>Habitación Deluxe</h3>
+                        <p>Espaciosa habitación con vistas a la ciudad y todas las comodidades para una estancia perfecta.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                            <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                            <li><i class="fas fa-bath"></i> Baño privado</li>
+                            <li><i class="fas fa-users"></i> Capacidad: 2 personas</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price">150$</span>
+                                <span class="per-night">/ noche</span>
+                            </div>
+                            <a href="habitacion-deluxe.html" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/img/junior.png" alt="Suite Junior">
+                    </div>
+                    <div class="room-content">
+                        <h3>Suite Junior</h3>
+                        <p>Suite elegante con sala de estar separada y posee vistas panorámicas al jardín y piscina del hotel.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                            <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                            <li><i class="fas fa-bath"></i> Baño privado</li>
+                            <li><i class="fas fa-users"></i> Capacidad: 2 personas</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price">220$</span>
+                                <span class="per-night">/ noche</span>
+                            </div>
+                            <a href="habitacion-junior.html" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="img/familiar.png" alt="Suite Familiar">
+                    </div>
+                    <div class="room-content">
+                        <h3>Suite Familiar</h3>
+                        <p>Amplia suite diseñada para familias con dos habitaciones conectadas y todas las comodidades.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                            <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                            <li><i class="fas fa-bath"></i> 2 Baños privados</li>
+                            <li><i class="fas fa-users"></i> Capacidad: 4 personas</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price">280$</span>
+                                <span class="per-night">/ noche</span>
+                            </div>
+                            <a href="habitacion-familiar.html" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/img/ejecutiva1.png" alt="Suite Ejecutiva">
+                    </div>
+                    <div class="room-content">
+                        <h3>Suite Ejecutiva</h3>
+                        <p>Perfecta para viajeros de negocios, con un escritorio amplio y comodidades para largas estadías.</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratis de alta velocidad</li>
+                            <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                            <li><i class="fas fa-bath"></i> Baño privado</li>
+                            <li><i class="fas fa-users"></i> Capacidad: 2 personas</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price">180$</span>
+                                <span class="per-night">/ noche</span>
+                            </div>
+                            <a href="habitacion.html?id=3" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-card">
+                    <div class="room-image">
+                        <img src="/img/premium1.png" alt="Habitación Premium">
+                    </div>
+                    <div class="room-content">
+                        <h3>Habitación Premium</h3>
+                        <p>Ofrece mayor espacio y comodidades adicionales, destinada a quienes disfrutan de vistas impresionantes</p>
+                        <ul class="room-features">
+                            <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                            <li><i class="fas fa-coffee"></i> Desayuno incluido y área de descanso</li>
+                            <li><i class="fas fa-bath"></i> 2 Baños privado</li>
+                            <li><i class="fas fa-users"></i> Capacidad: 3 personas</li>
+                        </ul>
+                        <div class="room-footer">
+                            <div class="room-price">
+                                <span class="price">260$</span>
+                                <span class="per-night">/ noche</span>
+                            </div>
+                            <a href="habitacion.html?id=3" class="btn btn-primary">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

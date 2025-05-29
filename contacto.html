@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Hotel Luna</title>
+    <meta name="description" content="Ponte en contacto con Hotel Luna para cualquier consulta, reserva o información adicional sobre nuestros servicios.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/main.js"></script>
+    <script src="js/contacto.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Hotel Luna</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html" class="active">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+58 424-9636655</span>
+                    </div>
+                    <a href="reserva.html" class="btn btn-primary">Reservar</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+58 424-9636655</span>
+                </div>
+                <a href="reserva.html" class="btn btn-primary">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Titulo -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Contacto</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                <span class="current">Contacto</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seccion de contacto -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    <p class="contact-intro">Estamos a su disposición para cualquier consulta o reserva. No dude en ponerse en contacto con nosotros a través de cualquiera de los siguientes medios.</p>
+                    
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>Dirección</h3>
+                                <p>Calle Principal 123, 28001 Madrid, España</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>Teléfono</h3>
+                                <p>+58 424-9636655</p>
+                                <p>+58 416-4850159 (Reservas)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>Email</h3>
+                                <p>info@hotel-luna.com</p>
+                                <p>reservas@hotel-luna.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>Horario de Recepción</h3>
+                                <p>24 horas, 7 días a la semana</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links-s">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-icons-s">
+                            <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com"><i class="fab fa-twitter"></i></a>  
+                            <a href="https://linkedin.com" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Envíanos un Mensaje</h2>
+                    <p class="form-intro">Complete el siguiente formulario y nos pondremos en contacto con usted lo antes posible.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nombre completo <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Correo electrónico <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Asunto <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                    
+                    <div id="formSuccess" class="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>¡Mensaje enviado con éxito!</h3>
+                        <p>Gracias por contactarnos. Nos pondremos en contacto contigo lo antes posible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Cómo Llegar</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12147.354030289095!2d-3.7037974302246036!3d40.41677007936128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1650000000000!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="directions">
+                <div class="direction-item">
+                    <div class="direction-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="direction-text">
+                        <h3>Desde el Aeropuerto</h3>
+                        <p>El hotel se encuentra a 20 minutos en coche del Aeropuerto Madrid-Barajas. Ofrecemos servicio de traslado bajo petición.</p>
+                    </div>
+                </div>
+                
+                <div class="direction-item">
+                    <div class="direction-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <div class="direction-text">
+                        <h3>Desde la Estación de Tren</h3>
+                        <p>A 10 minutos a pie de la estación de Atocha. Tome la salida principal y siga las indicaciones hacia la Plaza Mayor.</p>
+                    </div>
+                </div>
+                
+                <div class="direction-item">
+                    <div class="direction-icon">
+                        <i class="fas fa-subway"></i>
+                    </div>
+                    <div class="direction-text">
+                        <h3>En Metro</h3>
+                        <p>La estación más cercana es Sol (Líneas 1, 2 y 3). Desde allí, camine 5 minutos en dirección norte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cuál es la hora de check-in y check-out?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>El check-in es a partir de las 15:00 y el check-out hasta las 12:00. Ofrecemos servicio de early check-in y late check-out sujeto a disponibilidad y con posible cargo adicional.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Se admiten mascotas en el hotel?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, admitimos mascotas pequeñas (hasta 10kg) en habitaciones seleccionadas con un suplemento de 30$ por noche. Es necesario notificarlo al hacer la reserva para asignarle una habitación adecuada.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen servicio de traslado desde el aeropuerto?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos servicio de traslado privado desde y hacia el aeropuerto con coste adicional. Puede solicitarlo al hacer su reserva o contactando con recepción al menos 24 horas antes de su llegada.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Hay servicio de aparcamiento?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, disponemos de servicio de aparcacoches y estacionamiento privado. El coste es de 25$ por día para huéspedes del hotel.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿El desayuno está incluido en el precio de la habitación?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Depende del tipo de tarifa reservada. Las tarifas que incluyen desayuno lo especifican claramente. En caso contrario, puede añadir el desayuno buffet por 25$ por persona y día.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Prefiere Hablar Directamente con Nosotros?</h2>
+                <p>Nuestro equipo de atención al cliente está disponible las 24 horas para ayudarle con cualquier consulta.</p>
+                <div class="cta-buttons">
+                    <a href="tel:+58 424-9636655" class="btn btn-primary"><i class="fas fa-phone"></i> Llamar Ahora</a>
+                    <a href="reserva.html" class="btn btn-outline">Hacer una Reserva</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hotel Luna</h3>
+                    <p>Ofrecemos una experiencia única de hospitalidad con servicios de primera clase y atención personalizada para hacer de su estancia un momento inolvidable.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com"><i class="fab fa-twitter"></i></a>  
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Calle Principal 123, 28001 Madrid, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+58 424-9636655</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@hotel-luna.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete para recibir ofertas exclusivas y novedades.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Hotel Luna. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

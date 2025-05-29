@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Hotel Luna</title>
+    <meta name="description" content="Descubre las instalaciones, habitaciones y servicios del Hotel Luna a través de nuestra galería de imágenes.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Hotel Luna</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html" class="active">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+58 424-9636655</span>
+                    </div>
+                    <a href="reserva.html" class="btn btn-primary">Reservar</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+58 424-9636655</span>
+                </div>
+                <a href="reserva.html" class="btn btn-primary">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-title">
+        <div class="container">
+            <h1>Galería</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                <span class="current">Galería</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-intro">
+                <h2>Descubre Hotel Luna</h2>
+                <p>Explora nuestras elegantes instalaciones, cómodas habitaciones y excepcionales servicios a través de nuestra galería de imágenes.</p>
+            </div>
+
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    <span>Todas</span>
+                </button>
+                <button class="filter-btn" data-filter="habitaciones">
+                    <i class="fas fa-bed"></i>
+                    <span>Habitaciones</span>
+                </button>
+                <button class="filter-btn" data-filter="restaurante">
+                    <i class="fas fa-utensils"></i>
+                    <span>Restaurante</span>
+                </button>
+                <button class="filter-btn" data-filter="spa">
+                    <i class="fas fa-spa"></i>
+                    <span>Spa y relajación</span>
+                </button>
+                <button class="filter-btn" data-filter="instalaciones">
+                    <i class="fas fa-building"></i>
+                    <span>Instalaciones</span>
+                </button>
+                <button class="filter-btn" data-filter="eventos">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Eventos</span>
+                </button>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item" data-category="habitaciones">
+                    <div class="gallery-image">
+                        <img src="img/deluxe1.png" alt="Habitación Deluxe" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Habitación Deluxe</h3>
+                                <p>Espaciosa habitación con vistas a la ciudad</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/deluxe1.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="habitaciones">
+                    <div class="gallery-image">
+                        <img src="img/junior.png" alt="Suite Junior" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Suite Junior</h3>
+                                <p>Suite elegante con sala de estar</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/junior.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="habitaciones">
+                    <div class="gallery-image">
+                        <img src="img/familiar3.jpg" alt="Baño de Lujo" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Baño de Lujo</h3>
+                                <p>Baños equipados con artículos premium</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/familiar3.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="habitaciones">
+                    <div class="gallery-image">
+                        <img src="img/familiar.png" alt="Suite Familiar" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Suite Familiar</h3>
+                                <p>Perfecta para familias con niños</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/familiar.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="restaurante">
+                    <div class="gallery-image">
+                        <img src="img/restaurante.png" alt="Restaurante Principal" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Restaurante Principal</h3>
+                                <p>Ambiente elegante y cocina gourmet</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/restaurante.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="restaurante">
+                    <div class="gallery-image">
+                        <img src="img/terraza.png" alt="Bar Lounge" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Terraza Bar Lounge</h3>
+                                <p>Cócteles artesanales y ambiente relajado</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/terraza.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="restaurante">
+                    <div class="gallery-image">
+                        <img src="img/cafeteria.png" alt="Café" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Café Bistro</h3>
+                                <p>Cenas al aire libre con vistas panorámicas</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/cafeteria.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-image">
+                        <img src="img/spa.png" alt="Spa Relajación" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Spa de Relajación</h3>
+                                <p>Tratamientos de bienestar y relajación</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/spa.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-image">
+                        <img src="img/piscina.png" alt="Piscina" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Piscina Interior</h3>
+                                <p>Piscina climatizada para todas las estaciones</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/piscina.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-image">
+                        <img src="img/gym.png" alt="Gimnasio Moderno" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Gimnasio Moderno</h3>
+                                <p>Equipamiento de última generación</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/gym.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="instalaciones">
+                    <div class="gallery-image">
+                        <img src="img/lobby.png" alt="Lobby Principal" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Lobby Principal</h3>
+                                <p>Recepción elegante y acogedora</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/lobby.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="instalaciones">
+                    <div class="gallery-image">
+                        <img src="img/jardines.png" alt="Jardines del Hotel" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Jardines del Hotel</h3>
+                                <p>Espacios verdes para relajarse</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/jardines.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="eventos">
+                    <div class="gallery-image">
+                        <img src="img/eventos.png" alt="Salón de Eventos" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Salón de Eventos</h3>
+                                <p>Espacio versátil para celebraciones</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/eventos.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="eventos">
+                    <div class="gallery-image">
+                        <img src="img/reuniones.png" alt="Sala de Conferencias" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Sala de Conferencias</h3>
+                                <p>Equipada con tecnología moderna</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/reuniones.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="eventos">
+                    <div class="gallery-image">
+                        <img src="img/terraza-eventos.png" alt="Terraza de Eventos" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Terraza de Eventos</h3>
+                                <p>Eventos al aire libre con vistas únicas</p>
+                            </div>
+                            <button class="gallery-zoom" data-src="img/terraza-eventos.png">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="gallery-load-more">
+                <button class="btn btn-outline" id="load-more-btn">
+                    Cargar Más Imágenes
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Stats -->
+    <section class="gallery-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="150">0</h3>
+                        <p>Imágenes en Galería</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="45">0</h3>
+                        <p>Habitaciones Disponibles</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="5">0</h3>
+                        <p>Estrellas de Calidad</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="1000">0</h3>
+                        <p>Huéspedes Satisfechos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox-modal" id="lightbox-modal">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        <div class="lightbox-container">
+            <button class="lightbox-close" id="lightbox-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" id="lightbox-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" id="lightbox-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-content">
+                <img src="/placeholder.svg" alt="" id="lightbox-image">
+                <div class="lightbox-info">
+                    <h3 id="lightbox-title"></h3>
+                    <p id="lightbox-description"></p>
+                </div>
+            </div>
+            <div class="lightbox-counter">
+                <span id="lightbox-current">1</span> / <span id="lightbox-total">1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hotel Luna</h3>
+                    <p>Ofrecemos una experiencia única de hospitalidad con servicios de primera clase y atención personalizada para hacer de su estancia un momento inolvidable.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="promociones.html">Promociones</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Calle Principal 123, 28001 Madrid, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+58 424-9636655</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@hotel-luna.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete para recibir ofertas exclusivas y novedades.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Hotel Vista. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>

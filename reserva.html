@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva tu Habitación - Hotel Luna</title>
+    <meta name="description" content="Reserva tu estancia en Hotel Luna. Proceso de reserva rápido y seguro.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/reserva.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">Hotel Luna</a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="phone">
+                        <i class="fas fa-phone"></i>
+                        <span>+58 424-9636655</span>
+                    </div>
+                    <a href="habitaciones.html" class="btn btn-primary">Reservar</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <!-- Menu para telefonos moviles -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="habitaciones.html">Habitaciones</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="mobile-contact">
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <span>+58 424-9636655</span>
+                </div>
+                <a href="habitaciones.html" class="btn btn-primary">Reservar Ahora</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Reserva tu Habitación</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span class="separator"><i class="fas fa-chevron-right"></i></span>
+                <span class="current">Reserva</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <!-- Booking Steps -->
+                <div class="booking-steps">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Seleccionar Habitación</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Datos Personales</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Confirmar Reserva</div>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <form id="booking-form" class="booking-form">
+                    <!-- Step 1: Select Room -->
+                    <div class="booking-step active" id="step-1">
+                        <h2>Selecciona tu Habitación</h2>
+                        
+                        <div class="form-group">
+                            <label for="check-in-date">Fecha de llegada</label>
+                            <input type="date" id="check-in-date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="check-out-date">Fecha de salida</label>
+                            <input type="date" id="check-out-date" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adults">Adultos</label>
+                                <select id="adults" required>
+                                    <option value="1">1 adulto</option>
+                                    <option value="2" selected>2 adultos</option>
+                                    <option value="3">3 adultos</option>
+                                    <option value="4">4 adultos</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="children">Niños</label>
+                                <select id="children">
+                                    <option value="0" selected>0 niños</option>
+                                    <option value="1">1 niño</option>
+                                    <option value="2">2 niños</option>
+                                    <option value="3">3 niños</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="available-rooms">
+                            <h3>Habitaciones Disponibles</h3>
+                            
+                            <div class="room-option">
+                                <div class="room-image">
+                                    <img src="img/deluxe1.png" alt="Habitación Deluxe">
+                                </div>
+                                <div class="room-details">
+                                    <h4>Habitación Deluxe</h4>
+                                    <p>Espaciosa habitación con vistas a la ciudad y todas las comodidades para una estancia perfecta.</p>
+                                    <ul class="room-features">
+                                        <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                                        <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                                        <li><i class="fas fa-bath"></i> Baño privado</li>
+                                        <li><i class="fas fa-users"></i> Capacidad: 2 personas</li>
+                                    </ul>
+                                </div>
+                                <div class="room-price">
+                                    <div class="price">150$</div>
+                                    <div class="per-night">por noche</div>
+                                    <label class="room-select">
+                                        <input type="radio" name="room-type" value="deluxe" data-price="150" data-name="Habitación Deluxe">
+                                        <span>Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="room-option">
+                                <div class="room-image">
+                                    <img src="img/junior.png" alt="Suite Junior">
+                                </div>
+                                <div class="room-details">
+                                    <h4>Suite Junior</h4>
+                                    <p>Suite elegante con sala de estar separada y vistas panorámicas al jardín del hotel.</p>
+                                    <ul class="room-features">
+                                        <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                                        <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                                        <li><i class="fas fa-bath"></i> Baño privado</li>
+                                        <li><i class="fas fa-users"></i> Capacidad: 2 personas</li>
+                                    </ul>
+                                </div>
+                                <div class="room-price">
+                                    <div class="price">220$</div>
+                                    <div class="per-night">por noche</div>
+                                    <label class="room-select">
+                                        <input type="radio" name="room-type" value="junior-suite" data-price="220" data-name="Suite Junior">
+                                        <span>Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="room-option">
+                                <div class="room-image">
+                                    <img src="img/familiar.png" alt="Suite Familiar">
+                                </div>
+                                <div class="room-details">
+                                    <h4>Suite Familiar</h4>
+                                    <p>Amplia suite diseñada para familias con dos habitaciones conectadas y todas las comodidades.</p>
+                                    <ul class="room-features">
+                                        <li><i class="fas fa-wifi"></i> Wi-Fi gratis</li>
+                                        <li><i class="fas fa-coffee"></i> Desayuno incluido</li>
+                                        <li><i class="fas fa-bath"></i> Baño privado</li>
+                                        <li><i class="fas fa-users"></i> Capacidad: 4 personas</li>
+                                    </ul>
+                                </div>
+                                <div class="room-price">
+                                    <div class="price">280$</div>
+                                    <div class="per-night">por noche</div>
+                                    <label class="room-select">
+                                        <input type="radio" name="room-type" value="family-suite" data-price="280" data-name="Suite Familiar">
+                                        <span>Seleccionar</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-primary next-step" data-next="2">Continuar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Personal Information -->
+                    <div class="booking-step" id="step-2">
+                        <h2>Datos Personales</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">Nombre</label>
+                                <input type="text" id="first-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last-name">Apellidos</label>
+                                <input type="text" id="last-name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Dirección</label>
+                            <input type="text" id="address" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">Ciudad</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="postal-code">Código Postal</label>
+                                <input type="text" id="postal-code" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">País</label>
+                            <select id="country" required>
+                                <option value="">Seleccionar país</option>
+                                <option value="ES">España</option>
+                                <option value="FR">Francia</option>
+                                <option value="IT">Italia</option>
+                                <option value="DE">Alemania</option>
+                                <option value="UK">Reino Unido</option>
+                                <option value="PT">Portugal</option>
+                                <option value="US">Estados Unidos</option>
+                                <option value="MX">México</option>
+                                <option value="AR">Argentina</option>
+                                <option value="CO">Colombia</option>
+                                <option value="CL">Chile</option>
+                                <option value="PE">Perú</option>
+                                <option value="VE">Venezuela</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="special-requests">Peticiones Especiales</label>
+                            <textarea id="special-requests" rows="4"></textarea>
+                        </div>
+                        
+                        <h3>Servicios Adicionales</h3>
+                        <div class="additional-services">
+                            <div class="service-option">
+                                <input type="checkbox" id="service-parking" value="parking" data-price="15">
+                                <label for="service-parking">Estacionamiento (15$ por día)</label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="service-breakfast" value="breakfast" data-price="20">
+                                <label for="service-breakfast">Desayuno Premium (20$ por persona/día)</label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="service-spa" value="spa" data-price="45">
+                                <label for="service-spa">Acceso al Spa (45$ por persona/estancia)</label>
+                            </div>
+                            
+                            <div class="service-option">
+                                <input type="checkbox" id="service-airport" value="airport" data-price="60">
+                                <label for="service-airport">Traslado desde/hacia el aeropuerto (60$)</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="1">Anterior</button>
+                            <button type="button" class="btn btn-primary next-step" data-next="3">Continuar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Confirm Booking -->
+                    <div class="booking-step" id="step-3">
+                        <h2>Confirmar Reserva</h2>
+                        
+                        <div class="booking-summary">
+                            <h3>Resumen de tu Reserva</h3>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Habitación:</div>
+                                <div class="summary-value" id="summary-room">-</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Fecha de llegada:</div>
+                                <div class="summary-value" id="summary-checkin">-</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Fecha de salida:</div>
+                                <div class="summary-value" id="summary-checkout">-</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Noches:</div>
+                                <div class="summary-value" id="summary-nights">-</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Huéspedes:</div>
+                                <div class="summary-value" id="summary-guests">-</div>
+                            </div>
+                            
+                            <div class="summary-divider"></div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Precio por noche:</div>
+                                <div class="summary-value" id="summary-price-night">-</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Subtotal alojamiento:</div>
+                                <div class="summary-value" id="summary-subtotal">-</div>
+                            </div>
+                            
+                            <div id="summary-services-container">
+                                <div class="summary-item summary-services-title">
+                                    <div class="summary-label">Servicios adicionales:</div>
+                                    <div class="summary-value"></div>
+                                </div>
+                                <div id="summary-services-list"></div>
+                            </div>
+                            
+                            <div class="summary-divider"></div>
+                            
+                            <div class="summary-item summary-total">
+                                <div class="summary-label">Total:</div>
+                                <div class="summary-value" id="summary-total">-</div>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-method">
+                            <h3>Método de Pago</h3>
+                            
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" id="payment-credit" name="payment-method" value="credit" checked>
+                                    <label for="payment-credit">Tarjeta de Crédito</label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" id="payment-paypal" name="payment-method" value="paypal">
+                                    <label for="payment-paypal">PayPal</label>
+                                </div>
+                                
+                                <div class="payment-option">
+                                    <input type="radio" id="payment-hotel" name="payment-method" value="hotel">
+                                    <label for="payment-hotel">Pagar en el Hotel</label>
+                                </div>
+                            </div>
+                            
+                            <div id="credit-card-details">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-number">Número de Tarjeta</label>
+                                        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-name">Nombre en la Tarjeta</label>
+                                        <input type="text" id="card-name">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-expiry">Fecha de Expiración</label>
+                                        <input type="text" id="card-expiry" placeholder="MM/AA">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="card-cvv">CVV</label>
+                                        <input type="text" id="card-cvv" placeholder="XXX">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-order">
+                            <div class="form-group terms-conditions">
+                                <input type="checkbox" id="terms" required>
+                                <label for="terms">He leído y acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a>.</label>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-buttons">
+                            <button type="button" class="btn btn-outline prev-step" data-prev="2">Anterior</button>
+                            <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Hotel Luna</h3>
+                    <p>Ofrecemos una experiencia única de hospitalidad con servicios de primera clase y atención personalizada para hacer de su estancia un momento inolvidable.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="habitaciones.html">Habitaciones</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Calle Principal 123, 28001 Madrid, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+58 424-9636655</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@hotel-luna.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Boletín</h3>
+                    <p>Suscríbete para recibir ofertas exclusivas y novedades.</p>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Hotel Luna. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/reserva.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+    
+    
