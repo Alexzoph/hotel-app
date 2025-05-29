@@ -136,3 +136,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+async function checkAvailability() {
+  try {
+    const tipo_habitacion = document.getElementById('tipo_habitacion').value;
+    if (!tipo_habitacion) throw new Error('Selecciona un tipo de habitación');
+    const mockData = [
+      { id: 1, tipo: 'Individual', estado: 'Disponible', precio: 100 },
+      { id: 2, tipo: 'Doble', estado: 'Disponible', precio: 150 },
+      { id: 3, tipo: 'Suite', estado: 'Ocupada', precio: 300 }
+    ];
+    const results = mockData.filter(room => 
+      room.tipo.toLowerCase() === tipo_habitacion.toLowerCase() && 
+      room.estado === 'Disponible'
+    );
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = results.length > 0
+      ? results.map(room => `<p>Habitación ${room.tipo} disponible por $${room.precio}</p>`).join('')
+      : '<p>No hay habitaciones disponibles.</p>';
+  } catch (error) {
+    console.error(error);
+    document.getElementById('results').innerHTML = `<p>Error: ${error.message}</p>`;
+  }
+}
