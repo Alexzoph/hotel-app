@@ -9,9 +9,9 @@ app.use(express.json());
 // Configuración de la conexión a MySQL
 const db = mysql.createConnection({
     host: 'localhost', // Cambia si tu MySQL está en otro servidor
-    user: 'tu_usuario', // Reemplaza con tu usuario de MySQL
-    password: 'tu_contraseña', // Reemplaza con tu contraseña
-    database: 'nombre_base_datos' // Reemplaza con el nombre de tu base de datos
+    user: 'root', // Reemplaza con tu usuario de MySQL
+    password: 'admin', // Reemplaza con tu contraseña
+    database: 'hotel' // Reemplaza con el nombre de tu base de datos
 });
 
 // Conectar a la base de datos
@@ -22,6 +22,13 @@ db.connect(err => {
     }
     console.log('Conectado a MySQL');
 });
+
+db.query('Select * from habitaciones' , (err, rows) => {
+    if (err) throw err
+    console.log('Datos de habitaciones:', rows);
+    console.log(rows)        
+}
+
 
 // Endpoint para obtener habitaciones disponibles
 app.get('/api/habitaciones', (req, res) => {
