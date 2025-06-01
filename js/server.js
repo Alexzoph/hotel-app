@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql2');
+const mysql = require('mysql');
 const cors = require('cors');
 
 const app = express();
@@ -23,11 +23,11 @@ db.connect(err => {
     console.log('Conectado a MySQL');
 });
 
-db.query('Select * from habitaciones' , (err, rows) => {
+/*db.query('Select * from Habitaciones' , (err, rows) => {
     if (err) throw err
     console.log('Datos de habitaciones:', rows);
     console.log(rows)        
-}
+})*/
 
 
 // Endpoint para obtener habitaciones disponibles
