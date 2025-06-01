@@ -77,10 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     rooms.forEach(room => {
                         resultsDiv.innerHTML += `
                             <div class="room">
-                                <h3>${room.name}</h3>
-                                <p>Tipo: ${room.type}</p>
-                                <p>Precio por noche: $${room.price}</p>
-                                <p>Capacidad: ${room.capacity} personas</p>
+                                <h3>${room.tipo_habitacion}</h3>
+                                <p>Habitación: #${room.numero_habitacion}</p>
+                                <p>Precio por noche: $${room.precio_por_noche}</p>
+                                <p>Capacidad: ${room.capacidad} persona/s</p>
                                 <button onclick="bookRoom(${room.id})">Reservar</button>
                             </div>
                         `;
