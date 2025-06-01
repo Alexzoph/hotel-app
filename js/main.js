@@ -17,14 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Configura las fechas mínimas para el formulario de búsqueda
     const checkInInput = document.getElementById('check-in');
     const checkOutInput = document.getElementById('check-out');
+    const resultsDiv = document.getElementById('results'); // Usa el div existente en el HTML
 
-    if (checkInInput && checkOutInput) {
-        // Establece la fecha mínima como hoy
+    if (checkInInput && checkOutInput && resultsDiv) {
         const today = new Date();
         const tomorrow = new Date(today);
         tomorrow.setDate(tomorrow.getDate() + 1);
 
-        // Formatear fechas para input date (YYYY-MM-DD)
         const formatDate = (date) => {
             const year = date.getFullYear();
             const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -35,13 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
         checkInInput.min = formatDate(today);
         checkOutInput.min = formatDate(tomorrow);
 
-        // Actualizar fecha mínima de salida cuando cambia la fecha de entrada
         checkInInput.addEventListener('change', function() {
             const newMinCheckout = new Date(this.value);
             newMinCheckout.setDate(newMinCheckout.getDate() + 1);
             checkOutInput.min = formatDate(newMinCheckout);
-            
-            // Si la fecha de salida es anterior a la nueva fecha mínima, actualizarla
+        
             if (new Date(checkOutInput.value) <= new Date(this.value)) {
                 checkOutInput.value = formatDate(newMinCheckout);
             }
@@ -51,10 +48,47 @@ document.addEventListener('DOMContentLoaded', function() {
     // Formulario de búsqueda
     const searchForm = document.getElementById('search-form');
     if (searchForm) {
-        searchForm.addEventListener('submit', function(e) {
+        searchForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            // En una aplicación real, redirigir a la página de resultados con los parámetros
-            window.location.href = 'habitaciones.html';
+
+            const checkIn = checkInInput.value;
+            const checkOut = checkOutInput.value;
+
+            // Validar que ambas fechas estén seleccionadas
+            if (!checkIn || !checkOut) {
+                resultsDiv.innerHTML = '<p style="color: red;">Por favor, selecciona ambas fechas.</p>';
+                return;
+            }
+
+            try {
+                // Llamada al backend
+                const response = await fetch(`http://localhost:3000/api/habitaciones?checkin=${checkIn}&checkout=${checkOut}`);
+                if (!response.ok) {
+                    throw new Error('Error al consultar disponibilidad');
+                }
+                const rooms = await response.json();
+
+                // Mostrar resultados
+                resultsDiv.innerHTML = ''; // Limpiar resultados anteriores
+                if (rooms.length === 0) {
+                    resultsDiv.innerHTML = '<p>No hay habitaciones disponibles para las fechas seleccionadas.</p>';
+                } else {
+                    resultsDiv.innerHTML = '<h2>Habitaciones Disponibles</h2>';
+                    rooms.forEach(room => {
+                        resultsDiv.innerHTML += `
+                            <div class="room">
+                                <h3>${room.name}</h3>
+                                <p>Tipo: ${room.type}</p>
+                                <p>Precio por noche: $${room.price}</p>
+                                <p>Capacidad: ${room.capacity} personas</p>
+                                <button onclick="bookRoom(${room.id})">Reservar</button>
+                            </div>
+                        `;
+                    });
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
         });
     }
 

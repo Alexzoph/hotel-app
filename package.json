@@ -7,5 +7,7 @@
     "start": "echo 'Este es un proyecto estático, usa un servidor estático para desarrollo'",
     "test": "echo \"No tests configured\" && exit 0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
