@@ -294,6 +294,14 @@
 .btn-block {
     width: 100%;
     margin-top: 10px;
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
 }
 
 .booking-help {
