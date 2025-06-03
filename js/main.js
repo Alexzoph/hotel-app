@@ -69,19 +69,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 const rooms = await response.json();
 
                 // Mostrar resultados
-                resultsDiv.innerHTML = ''; // Limpiar resultados anteriores
+                resultsDiv.innerHTML = '';
                 if (rooms.length === 0) {
                     resultsDiv.innerHTML = '<p>No hay habitaciones disponibles para las fechas seleccionadas.</p>';
                 } else {
                     resultsDiv.innerHTML = '<h2>Habitaciones Disponibles</h2>';
                     rooms.forEach(room => {
+                        // Determinar si se muestra un enlace o un botón
+                        let buttonOrLink;
+                        if (room.tipo_habitacion === 'Suite Junior') {
+                            buttonOrLink = `<a href="habitacion-junior.html" class="btn btn-primary">Ver Detalles</a>`;
+                        } else if (room.tipo_habitacion === 'Suite Familiar') {
+                            buttonOrLink = `<a href="habitacion-familiar.html" class="btn btn-primary">Ver Detalles</a>`;
+                        } else if (room.tipo_habitacion === 'Suite Deluxe') {
+                            buttonOrLink = `<a href="habitacion-deluxe.html" class="btn btn-primary">Ver Detalles</a>`; 
+                        } else {
+                            buttonOrLink = `<button onclick="bookRoom(${room.id_habitacion})">Reservar</button>`;
+                        }
+
                         resultsDiv.innerHTML += `
-                            <div class="room">
+                            <div class="room-content">
                                 <h3>${room.tipo_habitacion}</h3>
-                                <p>Habitación: #${room.numero_habitacion}</p>
+                                <p>Habitación: ${room.numero_habitacion}</p>
                                 <p>Precio por noche: $${room.precio_por_noche}</p>
-                                <p>Capacidad: ${room.capacidad} persona/s</p>
-                                <button onclick="bookRoom(${room.id})">Reservar</button>
+                                <p>Capacidad: ${room.capacidad} personas</p>
+                                <p>Descripción: ${room.descripcion || 'No disponible'}</p>
+                                ${buttonOrLink}
                             </div>
                         `;
                     });
